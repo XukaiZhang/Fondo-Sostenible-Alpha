@@ -2,39 +2,25 @@
   Contiene los estilos ESPECÍFICOS para la página de estrategia.
 */
 
-/* **** INICIO DE LA CORRECCIÓN ****
-  Por qué 'em':
-  Usamos unidades relativas.
-  
-  CORRECCIÓN FINAL: Círculos más grandes.
-  He aumentado el tamaño de los círculos de 10em a 12em
-  y ajustado el contenedor y el solapamiento para que
-  el texto "Sostenibilidad" quepa sin problemas.
-*/
-
 /* Contenedor principal del diagrama */
 .venn-diagram {
     position: relative;
-    /* CORRECCIÓN: Ancho total aumentado a 19em (12em del primer círculo + 7em de desplazamiento) */
-    width: 19em; 
-    /* CORRECCIÓN: Alto aumentado a 12em para coincidir con el círculo */
-    height: 12em; 
+    width: 27em; 
+    height: 15em; 
     margin: 2em auto 0;
-    font-size: 1.1rem; 
+    font-size: 1rem; 
 }
 
 /* Estilo de los círculos */
 .venn-diagram .circle {
     position: absolute;
-    /* CORRECCIÓN: Círculos aumentados a 12em de ancho */
-    width: 12em; 
-    /* CORRECCIÓN: Círculos aumentados a 12em de alto */
-    height: 12em;
+    width: 14em; 
+    height: 14em;
     border-radius: 50%;
     background-color: rgba(13, 110, 253, 0.5); /* Azul */
     
     box-sizing: border-box; 
-    padding: 1em; /* Mantenemos el padding interno */
+    padding: 1em; /* Mantenemos el padding */
     
     display: flex;
     align-items: center;
@@ -47,15 +33,14 @@
 /* Posición del primer círculo (Finanzas) */
 .venn-diagram .circle1 {
     top: 0;
-    left: 0;
+    left: 0; /* "Finanzas" se queda a la izquierda */
     z-index: 1; /* Por encima */
 }
 
 /* Posición del segundo círculo (Sostenibilidad) */
 .venn-diagram .circle2 {
     top: 0;
-    /* CORRECCIÓN: Solapamiento ajustado. (12em de ancho - 7em = 5em de solapamiento) */
-    left: 7em; 
+    left: 12em; 
     background-color: rgba(25, 135, 84, 0.5); /* Verde */
     z-index: 0; /* Por debajo */
 }
@@ -63,10 +48,8 @@
 /* Texto de la intersección */
 .venn-diagram .intersection {
     position: absolute;
-    top: 50%;
-    /* CORRECCIÓN: Centro del nuevo contenedor (19em / 2) */
-    left: 9.5em; 
-    
+    top: 47%;
+    left: 12.4em; 
     transform: translate(-50%, -50%);
     z-index: 2; /* Por encima de todo */
     color: #000;
@@ -75,4 +58,3 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
 }
-/* **** FIN DE LA CORRECCIÓN **** */
