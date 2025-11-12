@@ -1,0 +1,64 @@
+/* Por qué este archivo:
+  Contiene los estilos ESPECÍFICOS para el selector de ODS.
+*/
+
+/* Por qué .ods-icon-card:
+  Define el estilo base de las tarjetas de ODS.
+  
+  CORRECCIÓN DE BORDE:
+  'border: 3px solid transparent;' es la clave de tu petición.
+  Reserva 3px de espacio para un borde, pero lo hace invisible.
+  De esta forma, cuando la clase '.active' cambia el 'border-color',
+  el tamaño del marco es el mismo y no hay "salto".
+*/
+.ods-icon-card {
+    border: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Por qué .dimmed:
+  Esta es la clase por defecto que tienen los iconos.
+  Aplica un filtro gris y reduce la opacidad
+  para que parezcan 'apagados'.
+*/
+.ods-icon-card.dimmed {
+    filter: grayscale(100%);
+    opacity: 0.4;
+    background-color: #f8f9fa; /* Un gris claro */
+}
+
+/* Por qué .active:
+  Esta es la clase que JavaScript AÑADIRÁ.
+  Quita el filtro, sube la opacidad y da el efecto 'pop'.
+  NO define el 'border-color' aquí, eso lo hace el ID
+  para que cada ODS tenga su propio color.
+*/
+.ods-icon-card.active {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05); /* Efecto visual de 'pop' */
+}
+
+/* Por qué colores específicos: 
+  Usamos los colores oficiales de la marca ODS.
+  El CSS selecciona el icono por su ID (ej. #ods-7)
+  SOLO CUANDO también tiene la clase .active.
+*/
+
+/* ODS 7 - Amarillo */
+#ods-7.active {
+    border-color: #fcc30b; 
+    color: #fcc30b;
+}
+
+/* ODS 9 - Naranja */
+#ods-9.active {
+    border-color: #fd6925; 
+    color: #fd6925;
+}
+
+/* ODS 13 - Verde */
+#ods-13.active {
+    border-color: #3f7e44; 
+    color: #3f7e44;
+}

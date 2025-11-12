@@ -1,0 +1,37 @@
+/* Por qué este archivo:
+  Este CSS es para estilos GLOBALES que se aplican a todo el sitio,
+  como la fuente principal, colores de marca o el estilo del footer.
+  Esto cumple el requisito de no tener todo en un solo archivo.
+*/
+
+/* Por qué 'Montserrat': 
+  Es una fuente moderna y limpia, muy usada en finanzas y tecnología.
+  Es una elección profesional.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Por qué flex-column y min-height: 
+      Esto asegura que el footer se quede 'pegado' abajo
+      incluso en páginas con poco contenido, luciendo profesional.
+    */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    /* Por qué flex-grow: 
+      Hace que el contenido principal 'empuje' al footer hacia abajo.
+    */
+    flex-grow: 1;
+}
+
+/* Por qué .navbar-brand: 
+  Le damos un estilo más prominente al logo/nombre del cliente.
+  Usamos el color primario de Bootstrap para consistencia.
+*/
+.navbar-brand {
+    color: #0d6efd; 
+}

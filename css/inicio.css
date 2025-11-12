@@ -1,0 +1,18 @@
+/* Por qué este archivo:
+  Estilos solo para la página de inicio (index.html).
+  Aquí definimos el fondo del 'hero' (la sección principal).
+*/
+
+#hero-inicio {
+    /* Por qué esta imagen (real): 
+      Esta es la URL real de la imagen de Unsplash.
+      
+      Por qué el gradiente (linear-gradient):
+      Añade una capa oscura semitransparente sobre la imagen.
+      Esto asegura que el texto (blanco) sea legible, sin importar
+      qué tan clara u oscura sea la imagen de fondo. Es un truco profesional.
+    */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
